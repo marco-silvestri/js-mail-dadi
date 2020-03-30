@@ -30,6 +30,16 @@ a:visited {
   background-color: #CCC;
 }
 
+footer {
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background: rgb(255, 240, 105);
+  padding: 10px;
+}
+
 /* UTILITIES */
 
 .u--flex {

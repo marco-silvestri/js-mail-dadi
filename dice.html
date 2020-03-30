@@ -8,11 +8,26 @@
   <title>Roll a dice and be nice</title>
 </head>
 <body>
-  <button id="rollingMaster" class="btn" type="button" name="button">Roll</button>
-  <h1 id="result"></h1>
-  <h3 id="scoreUser">0</h3>
-  <h3 id="scoreAi">0</h3>
-  <h3 id="scoreTie">0</h3>
+  <div class="u--flex u--column">
+    <div class="app u--flex u--column u--alignCenter u--spaceAround">
+      <div class="app__section">
+        <button id="rollingMaster" class="btn" type="button" name="button">Roll</button>
+        <span>Current</span>
+        <h1 id="result">Result</h1>
+      </div>
+      <div class="app__section u--flex u--alignCenter u--spaceAround">
+        <span>User so far</span>
+        <h3 id="scoreUser">0</h3>
+        <span>AI so far</span>
+        <h3 id="scoreAi">0</h3>
+        <span>Ties so far</span>
+        <h3 id="scoreTie">0</h3>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <a href="index.html">Go back</a>
+  </footer>
   <script src="assets/script/dice.js" charset="utf-8"></script>
 </body>
 </html>

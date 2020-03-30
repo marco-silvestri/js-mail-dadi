@@ -8,21 +8,24 @@
   <title>User Panel</title>
 </head>
 <body>
-  <div class="app u--flex u--column u--spaceAround u--alignCenter">
-    <div class="app__section">
-        <label for="search-email">User to search:</label>
-        <input id="emailSearch" type="email" name="search-email" value="">
-        <button id="buttonSearch" type="button" name="button" class="btn">Search</button>
+  <div class="u--flex u--column">
+    <div class="app u--flex u--spaceAround u--alignCenter">
+      <div class="app__section u--flex u--spaceAround u--alignCenter">
+          <label for="search-email">User to search:</label>
+          <input id="emailSearch" type="email" name="search-email" value="">
+          <button id="buttonSearch" type="button" name="button" class="btn">Search</button>
+      </div>
+      <div class="app__section u--flex u--spaceAround u--alignCenter">
+        <label for="add-email">User to add:</label>
+        <input id="emailAdd" type="email" name="add-email" value="">
+        <button id="buttonAdd" type="button" name="button" class="btn">Add</button>
+      </div>
     </div>
-    <div class="app__section">
-      <label for="add-email">User to add:</label>
-      <input id="emailAdd" type="email" name="add-email" value="">
-      <button id="buttonAdd" type="button" name="button" class="btn">Add</button>
-    </div>
-    <div class="app__section">
-      <h1 id="result"></h1>
-    </div>
+    <h1 id="result">Output will be printed here.</h1>
   </div>
+  <footer>
+    <a href="index.html">Go back</a>
+  </footer>
   <script src="assets/script/search-interface.js" charset="utf-8"></script>
 </body>
 </html>
