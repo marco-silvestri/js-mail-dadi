@@ -4,18 +4,24 @@ TODO Perform 2 rolls, the first for the user and the second for the AI, the high
 
 */
 
-var buttonUser = document.getElementById('rollingUser');
-var buttonAi = document.getElementById('rollingAi');
+var rollingMaster = document.getElementById('rollingMaster');
+var result = document.getElementById('result');
+var scoreFieldAi = document.getElementById('scoreAi');
+var scoreFieldUser = document.getElementById('scoreUser');
+var scoreFieldTie = document.getElementById('scoreTie');
 var diceArray = [];
 var rollUser;
 var rollAi;
+var scoreAi = 0;
+var scoreUser = 0;
+var scoreTie = 0;
 console.log('JS is up and running');
 
 for (var i = 0; diceArray.length <= 5; i++) {
   diceArray[i] = i+1 ;
 }
 
-buttonUser.addEventListener('click',
+rollingMaster.addEventListener('click',
   function(){
     var min = 0;
     var max = diceArray.length - 1;
@@ -23,13 +29,16 @@ buttonUser.addEventListener('click',
     rollAi = diceArray[Math.floor(Math.random() * (max - min + 1)) + min];
 
     if (rollUser > rollAi) {
-      console.log('User won');
+      result.innerHTML = 'User won';
+      scoreFieldUser.innerHTML = scoreUser ++;
     }
     else if (rollUser < rollAi){
-      console.log('AI won');
+      result.innerHTML = 'AI won';
+      scoreFieldAi.innerHTML = scoreAi ++;
     }
     else {
-      console.log('Issa tie!');
+      result.innerHTML = 'Issa tie';
+      scoreFieldTie.innerHTML = scoreTie ++;
     }
   }
 );
