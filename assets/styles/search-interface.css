@@ -1,18 +1,32 @@
+body{
+    background-color: #F7B733;
+}
+
+.wrapper {
+  background-color: #4ABDAC;
+  margin: auto;
+  width: 500px;
+}
+
 .app {
-  min-width: 90vw;
-  min-height: 80vh;
-  background-color: #fff7b6;
-  flex-grow: 1;
+  flex-wrap: wrap;
+  flex-basis: 50%;
 }
 
 .app__section {
-  flex-grow: 1;
-  min-width: 400px;
-  background-color: #b6f7b3;
+  min-width: 300px;
+  min-height: 200px;
+  margin: 1% auto;
+  padding: 1%;
   text-align: center;
-  padding: 60px;
 }
 
 h1 {
   text-align: center;
+}
+
+h1,
+a,
+label {
+ color: #DFDCE3;
 }

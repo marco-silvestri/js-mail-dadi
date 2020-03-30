@@ -8,20 +8,22 @@
   <title>User Panel</title>
 </head>
 <body>
-  <div class="u--flex u--column">
-    <div class="app u--flex u--spaceAround u--alignCenter">
-      <div class="app__section u--flex u--spaceAround u--alignCenter">
-          <label for="search-email">User to search:</label>
-          <input id="emailSearch" type="email" name="search-email" value="">
-          <button id="buttonSearch" type="button" name="button" class="btn">Search</button>
+  <div class="wrapper u--flex u--column">
+    <div class="app u--flex u--column u--spaceAround">
+      <div class="app__section u--flex u--column u--alignCenter u--spaceAround">
+        <label for="search-email">User to search:</label>
+        <input id="emailSearch" type="email" name="search-email" value="">
+        <button id="buttonSearch" type="button" name="button" class="btn">Search</button>
       </div>
-      <div class="app__section u--flex u--spaceAround u--alignCenter">
+      <div class="app__section u--flex u--flex u--column u--alignCenter u--spaceAround">
         <label for="add-email">User to add:</label>
         <input id="emailAdd" type="email" name="add-email" value="">
         <button id="buttonAdd" type="button" name="button" class="btn">Add</button>
       </div>
     </div>
-    <h1 id="result">Output will be printed here.</h1>
+    <div class="app__section u--flex u--flex u--column u--alignCenter u--spaceAround">
+      <h1 id="result">Output will be printed here.</h1>
+    </div>
   </div>
   <footer>
     <a href="index.html">Go back</a>

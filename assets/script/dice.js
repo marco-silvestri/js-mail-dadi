@@ -30,15 +30,15 @@ rollingMaster.addEventListener('click',
 
     if (rollUser > rollAi) {
       result.innerHTML = 'User won';
-      scoreFieldUser.innerHTML = scoreUser ++;
+      scoreFieldUser.innerHTML = ++ scoreUser;
     }
     else if (rollUser < rollAi){
       result.innerHTML = 'AI won';
-      scoreFieldAi.innerHTML = scoreAi ++;
+      scoreFieldAi.innerHTML = ++ scoreAi;
     }
     else {
       result.innerHTML = 'Issa tie';
-      scoreFieldTie.innerHTML = scoreTie ++;
+      scoreFieldTie.innerHTML = ++ scoreTie;
     }
   }
 );
