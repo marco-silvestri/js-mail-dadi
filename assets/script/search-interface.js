@@ -21,18 +21,23 @@ var userFound = false;
 buttonSearch.addEventListener('click',
   function() {
     var searchInput = document.getElementById('emailSearch').value;
-    for (var i = 0; i < userCollection.length && userFound == false; i++){
-      userScope = userCollection[i];
-      if (userScope == searchInput) {
-        userFound = true;
+    if (searchInput != '') {
+      for (var i = 0; i < userCollection.length && userFound == false; i++){
+        userScope = userCollection[i];
+        if (userScope == searchInput) {
+          userFound = true;
+        }
+      }
+
+      if (userFound == true) {
+        resultArea.innerHTML = 'The user ' + searchInput + ' exists, also in a four-dimensional way.';
+      }
+      else {
+        resultArea.innerHTML = 'The user ' + searchInput + ' does not exist.';
       }
     }
-
-    if (userFound == true) {
-      resultArea.innerHTML = 'The user ' + searchInput + ' exists, also in a four-dimensional way.';
-    }
     else {
-      resultArea.innerHTML = 'The user ' + searchInput + ' does not exist.';
+      resultArea.innerHTML = 'Please insert a valid value.';
     }
   }
 );
@@ -40,7 +45,12 @@ buttonSearch.addEventListener('click',
 buttonAdd.addEventListener('click',
   function() {
     var addInput = document.getElementById('emailAdd').value;
-    userCollection.push(addInput);
-    resultArea.innerHTML = 'The user ' + addInput + ' has been added, also in the fourth dimension.'
+    if (addInput != '') {
+      userCollection.push(addInput);
+      resultArea.innerHTML = 'The user ' + addInput + ' has been added, also in the fourth dimension.';
+    }
+    else {
+      resultArea.innerHTML = 'Please insert a valid value.';
+    }
   }
 );
