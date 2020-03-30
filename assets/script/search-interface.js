@@ -10,22 +10,28 @@ var userCollection = ['michele@boolean.careers', 'fabio@boolean.careers', 'rober
 
 
 // References
-
+var buttonSearch = document.getElementById('buttonSearch');
+var resultArea = document.getElementById('result');
 var userScope;
 var userFound = false;
 
-var searchInput = prompt('Search for an existing e-mail address').toLowerCase();
+//var searchInput = prompt('Search for an existing e-mail address').toLowerCase();
 
-  for (var i = 0; i < userCollection.length && userFound == false; i++){
-    userScope = userCollection[i];
-    if (userScope == searchInput) {
-      userFound = true;
+buttonSearch.addEventListener('click',
+  function functionName() {
+    var searchInput = document.getElementById('emailSearch').value;
+    for (var i = 0; i < userCollection.length && userFound == false; i++){
+      userScope = userCollection[i];
+      if (userScope == searchInput.value) {
+        userFound = true;
+      }
+    }
+
+    if (userFound == true) {
+      resultArea.innerHTML = 'The user ' + searchInput + ' exists, also in a four-dimensional way.';
+    }
+    else {
+      resultArea.innerHTML = 'The user ' + searchInput + ' does not exist.';
     }
   }
-
-  if (userFound == true) {
-    console.log('The user ' + searchInput + ' exists, also in a four-dimensional way.');
-  }
-  else {
-    console.log('The user ' + searchInput + ' does not exist.');
-  }
+);

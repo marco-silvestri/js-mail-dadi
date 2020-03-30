@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/styles/common.css">
+  <link rel="stylesheet" href="assets/styles/search-interface.css">
+  <title>User Panel</title>
+</head>
+<body>
+  <div class="app u--flex u--column u--spaceAround u--alignCenter">
+    <div class="app__section">
+      <form class="formSearch" action="index.html" method="post">
+        <label for="email">User to search:</label>
+        <input id="emailSearch" type="email" name="email" value="">
+        <input id="buttonSearch" class="btn" type="submit" name="" value="Seach">
+      </form>
+    </div>
+    <div class="app__section">
+      <h1>Add a User by Email</h1>
+    </div>
+    <div class="app__section">
+      <h1 id="result"></h1>
+    </div>
+  </div>
+  <script src="assets/script/search-interface.js" charset="utf-8"></script>
+</body>
+</html>
